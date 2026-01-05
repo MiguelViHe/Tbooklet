@@ -1,7 +1,7 @@
 from PIL import ImageTk, Image
 
 def leer_imagen(path, size): # Redimensiona la imagen pasada con el tamaño pasado
-    return ImageTk.PhotoImage(Image.open(path).resize(size, Image.ANTIALIAS))
+    return ImageTk.PhotoImage(Image.open(path).resize(size, Image.Resampling.LANCZOS))
 
 def centrar_ventana(ventana, aplicacion_ancho, aplicacion_largo):
     pantalla_ancho = ventana.winfo_screenwidth()
